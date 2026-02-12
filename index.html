@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladería Pro - Gestión</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <h1>Heladería <span>Control</span></h1>
+        </header>
+
+        <nav class="bottom-nav">
+            <button class="nav-item active" onclick="verTab('tab-cuentas', this)">
+                <span class="icon">🧾</span>
+                <span>Cuentas</span>
+            </button>
+            <button class="nav-item" onclick="verTab('tab-inventario', this)">
+                <span class="icon">🍦</span>
+                <span>Stock</span>
+            </button>
+            <button class="nav-item" onclick="verTab('tab-empleados', this)">
+                <span class="icon">👥</span>
+                <span>Equipo</span>
+            </button>
+        </nav>
+
+        <main class="content">
+            <section id="tab-cuentas" class="tab-content active">
+                <div class="card">
+                    <h3>Liquidación Diaria</h3>
+                    <div class="input-group">
+                        <label>Vendedor</label>
+                        <select id="select-empleado"></select>
+                    </div>
+                    <div class="table-container">
+                        <table id="tabla-liquidacion"></table>
+                    </div>
+                    <div class="input-group">
+                        <label>Otros cargos / Adelantos</label>
+                        <input type="number" id="otros-cargos" placeholder="$ 0" inputmode="numeric">
+                    </div>
+                    <button class="btn btn-success" onclick="liquidar()">Generar Cobro</button>
+                </div>
+                <div id="resumen-pago" class="resumen-card" style="display:none;"></div>
+            </section>
+
+            <section id="tab-inventario" class="tab-content">
+                <div class="card">
+                    <h3>Estado del Congelador</h3>
+                    <div id="stock-display" class="grid-stock"></div>
+                </div>
+                <div class="card">
+                    <h3>Entrada de Producción</h3>
+                    <div id="inputs-produccion"></div>
+                    <button class="btn btn-primary" onclick="sumarProduccion()">Actualizar Inventario</button>
+                </div>
+            </section>
+
+            <section id="tab-empleados" class="tab-content">
+                <div class="card">
+                    <h3>Gestión de Personal</h3>
+                    <div class="add-emp-form">
+                        <input type="text" id="nuevo-empleado" placeholder="Nombre completo">
+                        <button class="btn-add" onclick="agregarEmpleado()">+</button>
+                    </div>
+                    <div id="lista-empleados" class="emp-list"></div>
+                </div>
+                <button class="btn-danger-outline" onclick="reiniciarTodo()">Formatear Sistema</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

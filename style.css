@@ -1,0 +1,130 @@
+:root {
+    --bg-color: #f2f4f7;
+    --card-bg: #ffffff;
+    --primary: #4361ee;
+    --success: #2ec4b6;
+    --danger: #e71d36;
+    --text-main: #2b2d42;
+    --text-muted: #8d99ae;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px; /* Espacio para el menú inferior */
+}
+
+.app-container { max-width: 500px; margin: auto; }
+
+/* Header */
+.main-header { padding: 20px; text-align: center; }
+.main-header h1 { font-size: 1.5rem; margin: 0; font-weight: 700; }
+.main-header span { color: var(--primary); }
+
+/* Cards */
+.card {
+    background: var(--card-bg);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h3 { margin-top: 0; font-size: 1.1rem; color: var(--text-main); margin-bottom: 20px; }
+
+/* Form Elements */
+.input-group { margin-bottom: 15px; }
+.input-group label { display: block; font-size: 0.85rem; margin-bottom: 6px; color: var(--text-muted); font-weight: 600; }
+
+select, input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #edf2f4;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+select:focus, input:focus { border-color: var(--primary); }
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:active { transform: scale(0.98); }
+.btn-success { background: var(--success); color: white; }
+.btn-primary { background: var(--primary); color: white; }
+
+/* Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+    border-radius: 20px 20px 0 0;
+    z-index: 100;
+}
+
+.nav-item {
+    border: none;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-item.active { color: var(--primary); }
+.nav-item .icon { font-size: 1.4rem; margin-bottom: 4px; }
+
+/* Stock Grid */
+.grid-stock { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stock-badge {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.stock-badge span:last-child { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
+
+/* Tabs Logic */
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.3s; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Resumen Pago */
+.resumen-card {
+    background: var(--text-main);
+    color: white;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+/* Empleados */
+.add-emp-form { display: flex; gap: 10px; }
+.btn-add { background: var(--primary); color: white; border: none; padding: 0 15px; border-radius: 10px; font-size: 1.5rem; }
+.emp-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #eee; }
+.btn-danger-outline { background: none; border: none; color: var(--danger); width: 100%; margin-top: 20px; text-decoration: underline; font-weight: 600; cursor: pointer; }
