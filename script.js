@@ -1,7 +1,7 @@
 const productos = [
     { nombre: "Helados", precio: 1100, id: "hel" },
-    { nombre: "Chococonos", precio: 1300, id: "cho" },
-    { nombre: "Cremas", precio: 1900, id: "cre" },
+    { nombre: "Chococonos", precio: 1400, id: "cho" },
+    { nombre: "Cremas", precio: 2100, id: "cre" },
     { nombre: "Paletas", precio: 400, id: "pal" }
 ];
 
