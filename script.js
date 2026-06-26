@@ -2,7 +2,7 @@ const productos = [
     { nombre: "Helados", precio: 1000, id: "hel" },
     { nombre: "Chococonos", precio: 1300, id: "cho" },
     { nombre: "Cremas", precio: 1950, id: "cre" },
-    { nombre: "Paletas", precio: 300, id: "pal" }
+    { nombre: "Paletas", precio: 400, id: "pal" }
 ];
 
 let inventarioGuardado = JSON.parse(localStorage.getItem('inv_v2')) || { };
