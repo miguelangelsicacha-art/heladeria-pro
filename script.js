@@ -6,7 +6,7 @@ const productos = [
     { nombre: "Paletas", precio: 300, id: "pal" }
 ];
 
-let inventario = JSON.parse(localStorage.getItem('inv_v2')) || { "Helados": 0, "Chococonos": 0, "Cremas": 0, "Paletas": 0 };
+let inventario = JSON.parse(localStorage.getItem('inv_v2')) || { "Helados": 0, "Chococonos": 0, "Cremas": 0, "Paletas Viche": 0, "Paletas": 0 };
 let empleados = JSON.parse(localStorage.getItem('emp_v2')) || ["General"];
 
 function verTab(tabId, btn) {
