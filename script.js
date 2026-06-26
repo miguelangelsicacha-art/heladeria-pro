@@ -6,7 +6,11 @@ const productos = [
     { nombre: "Paletas", precio: 300, id: "pal" }
 ];
 
-let inventario = JSON.parse(localStorage.getItem('inv_v2')) || { "Helados": 0, "Chococonos": 0, "Cremas": 0, "PaletasViche": 0, "Paletas": 0 };
+let inventarioGuardado = JSON.parse(localStorage.getItem('inv_v2')) || { };
+let inventario = {};
+productos.forEach(p => {
+    inventario[p.nombre] = inventarioGuardado[p.nombre] !== undefined ? inventarioGuardado[p.nombre] : 0;
+});
 let empleados = JSON.parse(localStorage.getItem('emp_v2')) || ["General"];
 
 function verTab(tabId, btn) {
