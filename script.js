@@ -1,8 +1,9 @@
 const productos = [
-    { nombre: "Helados", precio: 1100, id: "hel" },
-    { nombre: "Chococonos", precio: 1400, id: "cho" },
-    { nombre: "Cremas", precio: 2100, id: "cre" },
-    { nombre: "Paletas", precio: 400, id: "pal" }
+    { nombre: "Helados", precio: 1000, id: "hel" },
+    { nombre: "Chococonos", precio: 1300, id: "cho" },
+    { nombre: "Cremas", precio: 1950, id: "cre" },
+    { nombre: "Paletas Viche", precio: 350, id: "pal_viche" },
+    { nombre: "Paletas", precio: 300, id: "pal" }
 ];
 
 let inventario = JSON.parse(localStorage.getItem('inv_v2')) || { "Helados": 0, "Chococonos": 0, "Cremas": 0, "Paletas": 0 };
